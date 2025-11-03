@@ -75,7 +75,7 @@ SafeSend is designed for:
 ### Current Limitations
 
 1. **Blockchain Support**
-   - Currently supports: Ethereum, Arbitrum One, Binance Smart Chain
+   - Currently supports: Ethereum, Arbitrum One, Binance Smart Chain, Base
    - Other chains may be added in future updates
 
 2. **Token Standards**
@@ -91,7 +91,6 @@ SafeSend is designed for:
    - Failed Telegram notifications may delay or block transactions
 
 5. **Test Amount**
-   - Fixed at 0.001 tokens (may not be suitable for all token denominations)
    - Requires sufficient balance for both test and main transfer
 
 ### Important Considerations
@@ -108,7 +107,7 @@ SafeSend is designed for:
 ### Core Features
 
 #### 1. Multi-Chain Support
-- Transfer tokens across Ethereum, Arbitrum One, and Binance Smart Chain
+- Transfer tokens across Ethereum, Arbitrum One, Base and Binance Smart Chain
 - Clear chain selection interface
 - Automatic network switching in wallet
 
@@ -155,9 +154,15 @@ SafeSend is designed for:
 ### Step 1: Connect Your Web3 Wallet
 
 1. Visit [https://safesend.to/app](https://safesend.to/app)
-2. Click the wallet address button in the top-right corner
+2. Click the connect wallet button
 3. Select your wallet provider (MetaMask, WalletConnect, etc.)
+   
+   <img width="1423" height="830" alt="image" src="https://github.com/user-attachments/assets/6f8f4757-792a-4b1d-80c1-d657c7982c9d" />
+
 4. Approve the connection request in your wallet
+   
+   <img width="404" height="619" alt="image" src="https://github.com/user-attachments/assets/40444000-8911-49e3-9e0a-7fe84d2f6a91" />
+
 5. Your wallet address will appear in the top-right corner (abbreviated)
 
 **Supported Wallets:**
@@ -174,9 +179,25 @@ SafeSend is designed for:
 1. Navigate to the **Profile** tab
 2. Click **"Connect Telegram"** button
 3. Copy the OTP code that appears
+
+<img width="1458" height="839" alt="image" src="https://github.com/user-attachments/assets/e1676c14-909f-41d6-92b4-66fd7bc5d2d6" />
+
+   
 4. Click **"Open Bot"** to launch the SafeSend Telegram bot
+   
+   <img width="1413" height="834" alt="image" src="https://github.com/user-attachments/assets/18cc800c-830d-4051-a844-48f26faea299" />
+
 5. Paste the OTP code in the Telegram bot chat
 6. Receive confirmation message in Telegram
+   
+   <img width="549" height="642" alt="image" src="https://github.com/user-attachments/assets/86988cbc-d7d2-4a61-8848-e0f63b612e20" />
+
+7. Come back to the profiles tab and click check status and Voila! you are connected
+
+  <img width="1470" height="747" alt="image" src="https://github.com/user-attachments/assets/190b57b3-2f8e-40c5-baf9-60880cc3bcdf" />
+  
+
+
 
 **Why Telegram?**
 The Telegram integration provides a secure second factor for transaction approval, adding an extra layer of security to prevent unauthorized transfers.
@@ -190,6 +211,7 @@ The Telegram integration provides a secure second factor for transaction approva
    - Ethereum (ETH)
    - Arbitrum One
    - Binance Smart Chain (BSC)
+   - Base 
 3. Select your desired network
 4. Your wallet will prompt you to switch networks if needed
 
@@ -222,7 +244,7 @@ The Telegram integration provides a secure second factor for transaction approva
    - Full amount to be transferred to recipient
    - Must have sufficient balance
 
-2. **Test Amount Field**: Pre-filled with 0.001 tokens
+2. **Test Amount Field**:
    - Small amount sent first to verify recipient address
    - Optional but highly recommended
    - Can be adjusted if needed
@@ -232,6 +254,9 @@ The Telegram integration provides a secure second factor for transaction approva
    - Or click to select from Address Book
    - Double-check address for accuracy
 
+<img width="1421" height="838" alt="image" src="https://github.com/user-attachments/assets/89e92be1-2f41-4808-8feb-806fddb486df" />
+
+     
 **Pro Tip:** Save frequently used addresses to your Address Book for quick access and reduced error risk.
 
 ---
@@ -242,9 +267,12 @@ The Telegram integration provides a secure second factor for transaction approva
 2. Review the transaction details
 3. Your wallet will request token approval (if first time sending this token)
    - This allows SafeSend smart contract to transfer tokens on your behalf
-   - Approve the exact amount or unlimited (not recommended)
-4. Confirm the approval transaction in your wallet
-5. Wait for approval transaction to be confirmed on blockchain
+   - Approve the exact Test amount 
+4. Confirm the approval test transaction in your wallet for the test amount. Once it’s confirmed, the main amount will be automatically approved and sent.
+5. Then wait for the confirmation to get the transaction hash
+
+<img width="577" height="180" alt="image" src="https://github.com/user-attachments/assets/22c2a0c4-416d-4cfa-97f3-b833c552205c" />
+
 
 **Understanding Approvals:**
 Token approvals are a security feature of smart contracts. You're granting permission for the SafeSend contract to move your tokens. SafeSend requests exact approval amounts to enhance security.
@@ -313,6 +341,10 @@ Token approvals are a security feature of smart contracts. You're granting permi
    - **Address**: Full wallet address (0x...)
 4. Click **"Add New Address"** to save
 5. Address will now appear in your address book
+
+   <img width="616" height="391" alt="image" src="https://github.com/user-attachments/assets/d89da36d-f986-4c3f-afc9-064ec29d85e7" />
+
+
 
 ### Using Saved Addresses
 
@@ -539,41 +571,6 @@ Your wallet address will be publicly visible on the leaderboard if you're among 
 
 ---
 
-## Support and Resources
-
-### Getting Help
-
-**Official Channels:**
-- Website: [https://safesend.to/](https://safesend.to/)
-- Telegram Support: Available through the SafeSend bot
-- Email: hiring@nodeops.xyz (NodeOps team)
-
-### Documentation
-- This documentation: SAFESEND_DOCUMENTATION.md
-- Video tutorials: Available on the SafeSend website
-- NodeOps Documentation: [https://docs.nodeops.network/](https://docs.nodeops.network/)
-
-### Report Issues
-- Technical bugs: Contact through Telegram bot
-- Security concerns: Email support immediately
-- Feature requests: Submit through official channels
-
----
-
-## Developer Information
-
-SafeSend is developed and maintained by **NodeOps**.
-
-**About NodeOps:**
-NodeOps provides blockchain infrastructure and developer tools for Web3 applications.
-
-**Learn More:**
-- NodeOps Website: [https://nodeops.network/](https://nodeops.network/)
-- Documentation: [https://docs.nodeops.network/](https://docs.nodeops.network/)
-- Get Started: [https://docs.nodeops.network/Get-Started/Cloud-Infrastructure/deploy](https://docs.nodeops.network/Get-Started/Cloud-Infrastructure/deploy)
-
----
-
 ## Glossary
 
 **Web3 Wallet**: A cryptocurrency wallet that enables interaction with blockchain applications
@@ -615,17 +612,6 @@ NodeOps provides blockchain infrastructure and developer tools for Web3 applicat
 
 ---
 
-## Legal Disclaimer
-
-- SafeSend is a tool to facilitate secure token transfers
-- Users are responsible for verifying recipient addresses
-- Blockchain transactions are irreversible
-- Always perform due diligence before transferring funds
-- Use at your own risk
-- Not financial advice
-
----
-
 ## Conclusion
 
 SafeSend provides a secure, user-friendly platform for cryptocurrency transfers across multiple blockchains. By adding Telegram-based confirmations and test amount verification, it significantly reduces the risk of sending tokens to wrong addresses or executing unauthorized transactions.
@@ -637,9 +623,4 @@ For the best experience:
 - Keep sufficient gas tokens in your wallet
 - Review all confirmations carefully
 
-**Get Started Today**: [https://safesend.to/app](https://safesend.to/app)
 
----
-
-*Documentation last updated: November 2025*
-*For the latest updates and features, visit [https://safesend.to/](https://safesend.to/)*
